@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .pagenav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .pagenav-item {
+    width: 40px;
+    height: 40px;
+    margin: 0 3px;
+    
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    
+    background-color: #ddd;
+  }
+  
+  .pagenav-item:hover {
+    background-color: #ccc;
+  }
+  
+  .pagenav-item.active {
+    background-color: #d10953;
+    color: #fff;
+  }

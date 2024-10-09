@@ -1,0 +1,7 @@
+ul{
+    overflow:hidden;
+    }
+    li{
+    display:inline-block;
+    }
+  li.g::after{content: " >> ";}
