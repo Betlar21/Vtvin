@@ -1,0 +1,64 @@
+
+.radialgradient{
+    float: left;
+    margin: 20px;
+    width: 500px;
+    height: 300px;
+    border: 1px solid;
+    }
+    #circle, #circlerectangle{
+    background: radial-gradient(circle, blue, rgb(6,6,120));
+    }
+    #circle{
+    width: 300px;
+    }
+    #circleinthecorner{
+    background: radial-gradient(circle at 60px 60px, rgb(143, 143, 220), rgb(36, 36, 156) 20%);
+    
+    }
+    #someeye{
+    background: radial-gradient(circle, black 5%, white 12%, green 24%);
+    }
+    .repeatinggradient{
+        float: left;
+        border: 1px solid;
+        width: 400px;
+        margin: 20px;
+    }
+    #horizontalline{
+        height: 80px;
+        background: repeating-linear-gradient(black, black 5px, white 5px, white 10px);
+    }
+    #degline{
+        height: 33px;
+        background: repeating-linear-gradient(45deg, white, white 4px, red 4px, red 8px);
+    }
+    #spiral{
+        height: 400px;
+        background: repeating-radial-gradient(circle, white, white 4px, black 4px, black 8px);
+    }
+    .linear-gradient{
+        float: left;
+        margin: 20px;
+        height: 300px;
+        width: 300px;
+        border: 1px solid;
+    }
+    #gradientvertical{
+        background: linear-gradient(to bottom, yellow, white);
+    }
+    #gradienthorizontaltoright{
+        background: linear-gradient(to right, yellow, white);
+    }
+    #gradienthorizontaltoleft{
+        background: linear-gradient(to left, yellow, white);
+    }
+    #chbch{
+        background: linear-gradient(to bottom, red 33%,white 33%, white 67%, red 67%, red 100%);
+        width: 450px;
+    }
+    #Yeee
+    {
+        background: linear-gradient(to right, red, blue 55%, white 85%, red);
+        width: 450px;
+    }

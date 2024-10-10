@@ -1,0 +1,12 @@
+.gor{
+    resize:horizontal;
+}
+.both{
+    resize: both;
+}
+.none{
+    resize: none;
+}
+.vertical{
+    resize: vertical;
+}

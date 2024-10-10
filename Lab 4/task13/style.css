@@ -1,0 +1,37 @@
+.text{
+    font-family: Georgia;
+    color: rgb(62,61,61);
+    font-size:11px;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffd3c6;
+    margin: 5px;
+    padding: 10px 15px;
+    text-align: center;
+}
+.title, .cardtitle{
+    font-family: Trebuchet MS;
+    font-size: 13px;
+    color: grey;
+    text-align: center;
+}
+.rect{
+    width: 100%;
+    height: 60px;
+}
+#rect1{
+    background-color: #eeaeef;
+}
+#rect2{
+    background-color: #4b9bd1;
+}
+#rect3{
+    background-color: #67c45a;
+}

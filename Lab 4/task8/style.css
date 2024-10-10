@@ -1,0 +1,31 @@
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.buttons button{
+    float: left;
+    margin: 20px;
+    background-color: rgb(224, 215, 215);
+    border-radius: 1em;
+    border: none;
+    height: 4em;
+    width: 8em;
+    box-shadow: 0.1em 0.1em 0.1em rgb(224,215,215);
+
+}
+.buttons button a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button1{
+    font-size: 1em;
+}
+.button2{
+    font-size: 1.5em;
+}
+.button3{
+    font-size: 2em;
+}

@@ -1,0 +1,12 @@
+.r1{
+cursor: pointer;
+}
+.r2{
+cursor: progress ;
+}
+.r3{
+cursor: wait;
+}
+.r4{
+    cursor: url("MinecraftE.cur"), auto;
+}

@@ -1,0 +1,20 @@
+.wavy{
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+}
+.dotted{
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+    text-decoration-color: gray;
+}
+.dashed{
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+    text-decoration-color: green;
+}
+.double{
+    text-decoration-style: double;
+    text-decoration-line: underline;
+    text-decoration-color: red;
+}

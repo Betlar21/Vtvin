@@ -1,0 +1,146 @@
+#bg 
+{
+    position: relative;
+    background-color: #cfdde6;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+}
+#house 
+{
+    position: relative;
+    background-color: white;
+    width: 320px;
+    height: 90px;
+    left: 150px;
+    top: 120px;
+}
+#house::before 
+{
+    content: '';
+    position: absolute;
+    width: 260px;
+    border-bottom: 30px solid #d56851;
+    border-right: 30px solid transparent;
+    left: 30px;
+    top: -30px;
+}
+#house::after 
+{
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 40px;
+    background-color: #d56851;
+    top: -70px;
+    left: 80px;
+}
+#tower 
+{
+    position: relative;
+    background-color: white;
+    width: 80px;
+    height:230px ;
+    left: 150px;
+    top: 210px;
+}
+#tower::before 
+{
+    content: '';
+    position: absolute;
+    border: 50px solid transparent; 
+    border-bottom: 80px solid #d56851;
+    left: -10px;
+    top: -130px;
+}
+#tower::after 
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 43px;
+    background-color: #6b6b6b;
+    left: 25px;
+    top: 25px;
+}
+.win 
+{
+    display: inline-block;
+    position: relative;
+    background-color: #6b6b6b;
+    width: 30px;
+    height: 43px;
+    top: 20px;
+    left: 80px;
+    margin: 3px;
+}
+#winright 
+{
+    left: 100px;
+}
+.cloud1, .cloud2, .cloud3
+{
+    position: relative;
+    width: 55px;
+    height: 25px;
+    background: white;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    left: 45px;
+    top: 10px;
+    margin: 10px;
+}
+.cloud1::before 
+{
+    content: '';
+    position: absolute;
+    width: 65px;
+    height: 35px;
+    background: white;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    left: 38px;
+    top: -10px;
+}
+.cloud3::before 
+{
+    content: '';
+    position: absolute;
+    width: 65px;
+    height: 35px;
+    background: white;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    left: -45px;
+    top: -10px;
+}
+#c1 
+{
+    top: -240px;
+    animation: move1 6s linear infinite;
+}
+#c2 
+{
+    top: -220px;
+    animation: move2 6s linear infinite;
+}
+#c3 
+{
+    top: -220px;
+    animation: move3 8s linear infinite;
+}
+@keyframes move1 
+{
+    from {left: -240px;}
+    to {left: 560px;}
+}
+@keyframes move2 
+{
+    from {left: -140px;}
+    to {left: 600px;}
+}
+@keyframes move3 
+{
+    from {left: -220px;}
+    to {left: 600px;}
+}

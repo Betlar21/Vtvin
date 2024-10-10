@@ -1,0 +1,16 @@
+.box{
+    height: 300px;
+    width: 300px;
+    border: 1px solid;
+    float: left;
+    margin: 20px;
+}
+#oneshadow{
+    box-shadow: 15px 15px 15px grey;
+}
+#twoshadow{
+    box-shadow: 15px 15px 15px grey, -15px -15px 15px grey;
+}
+#innershadow{
+    box-shadow:inset 15px 15px 15px grey;
+}

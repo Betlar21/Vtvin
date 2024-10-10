@@ -1,0 +1,21 @@
+.content div {
+    width: 49%;
+    height: 150px;
+    background-color: blue;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+@media (min-width: 300px) {
+    .content div {
+        width: 24%;
+    }
+}

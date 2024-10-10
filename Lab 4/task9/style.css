@@ -1,0 +1,6 @@
+.grayscalefilter{filter: grayscale();}
+.sepiafilter{filter: sepia();}
+.saturatefilter{filter: saturate(50%);}
+.hue-rotatefilter{filter: hue-rotate(300deg);}
+.invertfilter{filter: invert();}
+.contrastfilter{filter: contrast(50%);}
