@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+    <style> 
+th,td{
+    background-color: orange;
+    color: darkcyan;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+<table id="matrix">
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+    <script>
+        let table = document.querySelector('#matrix');
+        
+        for (let i = 0; i < 5; i++) {
+            let newTr = document.createElement('tr');
+            table.append(newTr);
+            for (let j = 1; j <= 5; j++) {
+                let newTd = document.createElement('td');
+                newTd.innerText = `${j + i}`;
+                newTr.append(newTd);
+            }
+        }
+        
+        let allTr = document.querySelectorAll('tr');
+        
+        for (let i = 0; i < allTr.length; i++) {
+            allTr[i].children[i].style.background = 'yellow';
+        }
+        
+        
+            </script>
+</body>
+
+</html>
