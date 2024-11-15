@@ -1,42 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 2</title>
-    <style> 
-
-    </style>
-
-
-
-
+    <title>Задача 2</title>
 </head>
 <body>
+    <h2 class="pr">Заголовок с классом pr</h2>
+    <p class="pr">Абзац с классом pr.</p>
+    <p>Просто абзац, не поменяется.</p>
+    <p class="pr">Ещё абзац с классом pr.</p>
+    <button onclick="func()">Поменять содержимое</button>
 
-    <h2 class="pr"> Goooooooooooooooooooooooooooooooooooood game</h2>
-    <p class="pr"> Goooooooooooooooooooooooooooooooooooood game</p>
-    <p class="pr"> Goooooooooooooooooooooooooooooooooooood game</p>
-    <p class="pr"> Goooooooooooooooooooooooooooooooooooood game</p>
-    <p class="pr"> Goooooooooooooooooooooooooooooooooooood game</p>
-    <p> Baaaaaaaaaaaaaaaaaaaaaaaaaaaad skillllllllllllllllllllllll</p>
-
-
-    <button onclick="numerationZ()" class="btn" id="1331">Показать функцию</button>
     <script>
-     let PR = document.querySelectorAll('.pr');
-     let i = 0;
-     function numerationZ(i){
-     document.querySelectorAll('.pr')
-     .forEach((item, index) => item.innerHTML = index + 1)
-  }
- ////    button.addEventListener('click', () => {
- // numerationZ;
-//});
-
-
-
+        function func() {
+            const elements = document.querySelectorAll('.pr');
+            elements.forEach((element, index) => {
+                element.textContent = `Элемент ${index + 1}`;
+            });
+        }
     </script>
 </body>
-
 </html>

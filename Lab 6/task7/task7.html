@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <style>
+        .gallery {
+            text-align: center;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .thumbnails img {
+            width: 100px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .thumbnails img:hover {
+            transform: scale(1.1);
+        }
+        .main-image {
+            width: 500px;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img id="mainImage" class="main-image" src="images/image-6.jpg" alt="Основное изображение">
+        <div class="thumbnails" id="thumbnailContainer">
+            <img src="images/image-1.jpg" alt="Изображение 1">
+            <img src="images/image-2.jpg" alt="Изображение 2">
+            <img src="images/image-3.jpg" alt="Изображение 3">
+            <img src="images/image-4.jpg" alt="Изображение 4">
+            <img src="images/image-5.jpg" alt="Изображение 5">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('thumbnailContainer').addEventListener('click', function(event) {
+            if (event.target.tagName === 'IMG') {
+                const mainImage = document.getElementById('mainImage');
+                mainImage.src = event.target.src;
+            }
+        });
+    </script>
+</body>
+</html>

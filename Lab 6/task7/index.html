@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Галерея</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="galleria/galleria-1.4.2.min.js"></script>
+</head>
+
+<body>
+
+  <p><img id="largeImg" src="images/image-6.jpg" title="5 лучших аниме Хаяо Миядзаки"></p>
+  
+  <ul id="galleria">
+    <!-- браузер показывает небольшую встроенную подсказку из атрибута "title" при наведении курсора на текст -->
+    <li>
+      <a href="#" class="images/image-1" id="ada" title="Навсикая из долины ветров"><img src="images/image-1-thumb.jpg" id="ada" alt="images/image-1.jpg"></a>
+    </li>
+    <li>
+      <a href="#" class="images/image-2" id="ada"  title="Мой сосед Тоторо"><img src="images/image-2-thumb.jpg" id="ada" alt="images/image-2.jpg"></a>
+    </li>
+    <li>
+      <a href="#" class="images/image-3" id="ada"  title="Унесенные призраками"><img src="images/image-3-thumb.jpg" id="ada" alt="images/image-3.jpg"></a>
+    </li>
+    <li>
+      <a href="#" class="images/image-4" id="ada"  title="Ходячий замок"><img src="images/image-4-thumb.jpg" id="ada" alt="images/image-4.jpg"></a>
+    </li>
+    <li>
+      <a href="#" class="images/image-5" id="ada"  title="Ведьмина служба доставки"><img src="images/image-5-thumb.jpg" id="ada" alt="images/image-5.jpg"></a>
+    </li>
+  </ul>
+<!-- Нужно добавить скрипт -->
+<script>
+  Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+  Galleria.run('.galleria');
+</script>
+
+</body>
+</html>

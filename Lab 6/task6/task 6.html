@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+</head>
+<script>
+  // Вот тут
+  function removeRow (input) {
+  input.parentNode.remove()
+}
+
+
+
+  </script>
+
+<body>
+
+  <div id="container">
+    <div class="pane">
+      <h3>Сфинкс</h3>
+      <p>Одна из нескольких бесшерстных пород кошек. При выведении породы была закреплена естественная рецессивная мутация, приводящая к отсутствию шерсти. В нынешний момент это полностью сформированная и достаточно стабильная порода с 50-летним стажем, передающая свои признаки по рецессивному типу.</p>
+      <button class="remove-button" value="-" onclick="removeRow(this)">[x]</button>
+    </div>
+    <div class="pane">
+      <h3>Девон-рекс</h3>
+      <p>Порода домашних кошек, появившаяся в Великобритании в 1960-х гг. Отличительные черты - неординарная внешность и дружественный нрав.</p>
+      <button class="remove-button" value="-" onclick="removeRow(this)">[x]</button>
+    </div>
+    <div class="pane">
+      <h3>Корниш-рекс</h3>
+      <p>Порода домашних кошек, относящаяся к короткошёрстной группе. Основной отличительной особенностью их экстерьера является шерсть. Она не имеет остевых волосков, а подшёрсток завит в плотную волну, напоминающую по структуре каракуль.
+      </p>
+      <button class="remove-button" value="-" onclick="removeRow(this)">[x]</button>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогресс-бар</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Прогресс-бар</h3>
+        <progress id="progressBar" value="20" max="100"></progress>
+        <span id="progressValue">20%</span>
+        <br><br>
+        <button onclick="increaseProgress()">Увеличить значение</button>
+    </div>
+
+    <script>
+        function increaseProgress() {
+            const progressBar = document.getElementById('progressBar');
+            const progressValue = document.getElementById('progressValue');
+            let currentValue = parseInt(progressBar.value);
+
+            if (currentValue < 100) {
+                currentValue += 10;
+                progressBar.value = currentValue;
+                progressValue.textContent = currentValue + '%';
+            }
+        }
+    </script>
+</body>
+</html>
