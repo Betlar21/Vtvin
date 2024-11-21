@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <title>Космическая анимация</title>
+
+</head>
+<body>
+    <div class="space">
+        <div class="planet planet1"><img src="img/planet-1.png" alt=""></div>
+        <div class="planet planet2"><img src="img/planet-2.png" alt=""></div>
+        <div class="planet planet3"><img src="img/planet-3.png" alt=""></div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="cont">
+        <div class="elements">
+            <img src="img/spaceship.png">
+            <img src="img/ufo.png">
+            <img src="img/asteroid.png">
+        </div>
+        <button id="startButton" onclick="loop()">Поехали!</button>
+    </div>
+    </div>    
+
+
+    
+        <script>
+            function loop() {
+                setTimeout(() => {
+                    let elements = document.getElementsByClassName("elements")[0]
+                    let spaceship = elements.childNodes[1]
+                    let ufo = elements.childNodes[3]
+                    let asteroid = elements.childNodes[5]
+        
+                    let spaceshipImg = spaceship.src
+        
+                    spaceship.src = ufo.src
+                    ufo.src = asteroid.src
+                    asteroid.src = spaceshipImg 
+                    loop()
+                }, 500)
+            }
+        </script>
+</body>
+</html>
