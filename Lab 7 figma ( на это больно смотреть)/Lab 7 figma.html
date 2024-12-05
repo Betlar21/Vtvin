@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f0;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f8f0;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2f4f4f;
+        }
+        .navbar .nav-links {
+            display: flex;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #2f4f4f;
+            margin: 0 10px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #e0e0e0;
+        }
+        .navbar a.active {
+            background-color: #d0d0d0;
+        }
+        .content {
+            text-align: center;
+            align-items: center;
+            align-self: center;
+            padding: 50px 20px;
+        }
+        .content h1 {
+            font-size: 32px;
+            color: #2f4f4f;
+        }
+        .content p {
+            font-size: 18px;
+            color: #555;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #2f4f4f;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .phone-placeholder {
+            width: 300px;
+            height: 600px;
+            background-color: #e0e0e0;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+        .tel2{
+            width: 300px;
+            height: 600px;
+        }
+        .features {
+            padding: 50px 20px;
+            background-color: #f8f8f0;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+        .features img{width: 100%;}
+        .features h2 {
+            font-size: 28px;
+            color: #2f4f4f;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #d0d0d0;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .comments {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .comments h2 {
+            font-size: 28px;
+            color: #2f4f4f;
+            margin-bottom: 10px;
+        }
+        .comments p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .comment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .comment-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .comment-item p {
+            font-size: 16px;
+            color: #555;
+        }
+        .comment-item .author {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .hand-placeholder {
+            width: 100px;
+            height: 100px;
+            background-color: #d0d0d0;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+        .green-background {
+            background-color: #2f4f4f;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .green-background h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .green-background p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .green-background .button {
+            text-decoration: none;
+            color: #2f4f4f;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .green-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #d0d0d0;
+    
+          
+            background-image: url(fon.png);
+        }
+        .promo-section {
+            background-color: #f0e6d6;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .promo-section h2 {
+            font-size: 28px;
+            color: #2f4f4f;
+            margin-bottom: 20px;
+        }
+        .promo-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #2f4f4f;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .promo-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #d0d0d0;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .newsletter-section {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+            border: 2px solid #2f4f4f;
+            margin: 20px;
+        }
+        .newsletter-section h2 {
+            font-size: 28px;
+            color: #2f4f4f;
+            margin-bottom: 20px;
+        }
+        .newsletter-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .newsletter-form input[type="email"] {
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            width: 250px;
+        }
+        .newsletter-form button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #2f4f4f;
+            color: white;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #f8f8f0;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2f4f4f;
+        }
+        .footer .links, .footer .social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #2f4f4f;
+            margin: 0 10px;
+        }
+        @media (max-width: 768px) {
+            .feature-grid, .comment-grid {
+                grid-template-columns: 1fr;
+            }
+            .navbar .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer {
+                flex-direction: column;
+            }
+        }
+        .features{ align-items: center;
+        align-content: center;
+    width: 40%;}
+
+
+
+
+
+
+    .div2 {
+            background-color: #2b4c4c;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 40px;
+        }
+        .button1 {
+            background-color: white;
+            color: #2b4c4c;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .image1 {
+            width: 50px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+
+
+
+
+
+
+
+
+
+        .banner-container {
+            background-color: #f4e3c3;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            align-items: center;
+        }
+        .text-content {
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .download-button {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .download-button img {
+            width: 20px;
+            height: auto;
+            margin-right: 8px;
+        }
+        .play-store-button {
+            background-color: #ccc;
+            color: #333;
+        }
+        .phone-image {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+.group2{width: 100%;}
+.center{align-items: center;
+align-self: center;
+display: flex;
+align-content: center;}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">harbor</div>
+        <div class="nav-links">
+            <a href="#" >Home</a>
+            <a href="#">About</a>
+            <a href="#">Know Your Risks</a>
+            <a href="#">For Work</a>
+            <a href="#">Journal</a>
+            <a href="#">Shop</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Reimagining readiness for life's uncertain moments.</h1>
+        <p>The app that makes disaster preparedness easy and accessible. Because sometimes tomorrow doesn't look like today.</p>
+        <div class="button-group center group2">
+            <a href="#" class="download-button">
+                <img src="apple.png" alt="Apple Icon"> App Store
+            </a>
+            <a href="#" class="download-button play-store-button">
+                <img src="appstore.png" alt="Google Icon"> Play Store
+            </a>
+        </div>
+        <div class="phone-placeholder">
+            <img class="tel2" src="1234.png" alt="">
+        </div>
+    </div>
+    <div class="features">
+        <h2>The right plan for when things don't go as planned</h2>
+        <img src="5555555555555555555.png" alt="">
+        
+    </div>
+    <div class="comments">
+        <h2>We're ready, are you?</h2>
+        <p>Here's what people are saying about harbor.</p>
+        <div class="comment-grid">
+            <div class="comment-item">
+                <p>It's beautiful, easy to use, and is genuinely growing my confidence in crisis preparation.</p>
+                <div class="author">Antonia</div>
+            </div>
+            <div class="comment-item">
+                <p>This app is something I've been hoping for for a while now, so I'm excited to be beta testing it.</p>
+                <div class="author">Kathryn</div>
+            </div>
+            <div class="comment-item">
+                <p>It's a great app and I can't wait to use it more and see what all comes next.</p>
+                <div class="author">Gabriel</div>
+            </div>
+        </div>
+    </div>
+    <div class="hand-placeholder">
+      <img src="ruka.png" alt="">
+    </div>
+
+
+
+    <div class="green-background">
+        <div class="container div2">
+            
+            <h1>Our mission is to encourage readiness for all</h1>
+            <p>It's our dream that one day, everyday readiness will be quite ordinary like brushing your teeth. A little bit of effort with a big payoff.</p>
+            <a href="#" class="button">Learn more about us</a>
+        </div>
+        <div class="green-image-placeholder">
+            
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="banner-container">
+        <div class="text-content">
+            <h1>Stay one step ahead with harbor</h1>
+            <div class="button-group">
+                <a href="#" class="download-button">
+                    <img src="apple.png" alt="Apple Icon"> App Store
+                </a>
+                <a href="#" class="download-button play-store-button">
+                    <img src="appstore.png" alt="Google Icon"> Play Store
+                </a>
+            </div>
+        </div>
+        <img src="tel2.png" alt="Phone Image" class="phone-image">
+    </div>
+  
+
+
+    <div class="newsletter-section">
+        <h2>Join harbor high fives</h2>
+        <p>Up high. Down low. Tips on how to find your way through any disaster in the best way possible: together. And be the first in line for Android.</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Email address">
+            <button>SIGN UP</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="logo">harbor</div>
+        <div class="links">
+            <a href="#">Privacy</a>
+            <a href="#">Journal</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+            <a href="#">Shop</a>
+        </div>
+        <div class="social">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Risks</a>
+            <a href="#"><img src="tviter.png" alt="Twitter" width="20"></a>
+            <a href="#"><img src="inst.png" alt="Instagram" width="20"></a>
+            <a href="#"><img src="telegramm.png" alt="Facebook" width="20"></a>
+        </div>
+    </div>
+</body>
+</html>

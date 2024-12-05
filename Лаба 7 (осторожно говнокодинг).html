@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSite</title>
+    <style>
+       /* Общие стили для всех устройств */
+/* Общие стили для всех устройств */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f5edff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f5edff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #e6d2ff;
+    background-image: url(55.png);
+    background-attachment: local;
+    background-size: 100%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.auth-buttons button:hover {
+    background-color: #ddd;
+}
+
+/* Стили для карусели */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    align-self: center;
+    margin: auto;
+  left: 0px;
+  right: 0px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.content-section {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 800px;
+    gap: 20px;
+}
+
+.content-section img {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ddd;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.content-text {
+    flex: 1;
+}
+
+.content-text h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.content-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    background-color: #e6d2ff;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.read-more-btn:hover {
+    background-color: #d2bfff;
+}
+
+/* Стили для модального окна */
+.modal, .modal2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content, .modal2-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content h2, .modal2-content h2 {
+    margin-bottom: 15px;
+}
+
+.modal-content form, .modal2-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input, .modal2-content input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.modal-content button, .modal2-content button {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modal-content button:hover, .modal2-content button:hover {
+    background-color: #333;
+}
+
+.close-modal, .close-modal2 {
+    margin-top: 10px;
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.close-modal:hover, .close-modal2:hover {
+    text-decoration: underline;
+}
+
+.four-images-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.four-images-section img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.subscription {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subscription form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscription input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.subscription button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscription button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    font-size: 14px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #e0e0e0;
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-circle"></div>
+            <span class="logo-text">ArtSite</span>
+        </div>
+        <div class="auth-buttons">
+            <button id="loginBtn">Войти</button>
+            <button id="registerBtn">Регистрация</button>
+        </div>
+    </header>
+
+    <!-- Модальное окно для входа -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Войти</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <div class="close-modal" id="closeLoginModal">Закрыть</div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <div class="close-modal" id="closeRegisterModal">Закрыть</div>
+        </div>
+    </div>
+
+
+    <!-- Карусель -->
+    <div class="carousel" id="carousel">
+        <div class="carousel-images" id="carouselImages">
+            <img src="i.webp" alt="Изображение 1">
+            <img src="orig.webp" alt="Изображение 2">
+            <img src="scale_1200.png" alt="Изображение 3">
+        </div>
+        <div class="carousel-buttons">
+            <button id="prevBtn">Назад</button>
+            <button id="nextBtn">Вперед</button>
+        </div>
+    </div>
+ <!-- Элемент с изображением и текстом -->
+ <div class="content-section">
+    <img src="55.png" alt="Современное искусство">
+    <div class="content-text">
+        <h2>Современное искусство</h2>
+        <p>
+            Современное искусство - это динамичное и разнообразное художественное движение, 
+            охватывающее широкий спектр форм и стилей, созданных с середины 20-го века до наших дней.
+        </p>
+        <button class="read-more-btn" id="readMoreBtn">Читать далее</button>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div class="modal2" id="infoModal2">
+    <div class="modal2-content">
+        <h2>Современное искусство</h2>
+        <p>
+            Современное искусство включает в себя множество направлений, таких как абстракционизм, 
+            минимализм, концептуальное искусство и многие другие. Это искусство стремится к тому, 
+            чтобы исследовать новые формы выражения, часто бросая вызов традиционным представлениям 
+            о культуре и эстетике.
+        </p>
+        <button class="close-modal2" id="closeModal2">Закрыть</button>
+    </div>
+</div>
+
+
+
+<div class="four-images-section">
+    <img src="i (2).webp" alt="Image 1">
+    <img src="i (3).webp" alt="Image 2">
+    <img src="i (4).webp" alt="Image 3">
+    <img src="i (1).webp" alt="Image 4">
+</div>
+
+<section class="subscription">
+    <h2>Подписка на новости</h2>
+    <form>
+        <input type="email" placeholder="Ваш email" required>
+        <button type="submit">Подписаться</button>
+    </form>
+</section>
+
+<footer>
+<h4 align="center">Поделится</h4>
+<section class="gallery">
+ 
+
+ <script src="https://yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-curtain data-size="l" data-color-scheme="blackwhite" data-limit="4" data-services="vkontakte,odnoklassniki,telegram,twitter"></div>
+</section>
+  </footer>
+
+
+
+
+
+
+    <script>
+       
+// Открытие модальных окон
+const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'flex';
+        });
+
+        registerBtn.addEventListener('click', () => {
+            registerModal.style.display = 'flex';
+        });
+
+        // Закрытие модальных окон
+        const closeLoginModal = document.getElementById('closeLoginModal');
+        const closeRegisterModal = document.getElementById('closeRegisterModal');
+
+        closeLoginModal.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+        });
+
+        closeRegisterModal.addEventListener('click', () => {
+            registerModal.style.display = 'none';
+        });
+
+        // Обработка форм
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Вы успешно вошли!');
+            loginModal.style.display = 'none';
+        });
+
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Регистрация прошла успешно!');
+            registerModal.style.display = 'none';
+        });
+
+
+
+
+
+
+
+
+
+
+        // Логика для карусели
+        const carouselImages = document.getElementById('carouselImages');
+        const images = document.querySelectorAll('.carousel-images img');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+
+        // Функция обновления положения карусели
+        function updateCarousel() {
+            const imageWidth = images[0].clientWidth;
+            carouselImages.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        }
+
+        // Обработчики кнопок
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        // Адаптация при изменении размера окна
+        window.addEventListener('resize', updateCarousel);
+
+                // Логика для кнопки "Читать далее"
+                const readMoreBtn = document.getElementById('readMoreBtn');
+        const infoModal2 = document.getElementById('infoModal2');
+        const closeModal2 = document.getElementById('closeModal2');
+
+        readMoreBtn.addEventListener('click', () => {
+            infoModal2.style.display = 'flex';
+        });
+
+        closeModal2.addEventListener('click', () => {
+            infoModal2.style.display = 'none';
+        });
+
+        // Закрытие модального окна при клике вне его
+        window.addEventListener('click', (e) => {
+            if (e.target === infoModal2) {
+                infoModal2.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

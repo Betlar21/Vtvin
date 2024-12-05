@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 10</title>
+    <title>task10</title>
     <script>
-  let zp = prompt();
-  alert(`Premia 15%; Vsego:`+ zp=*1.15);
+        function calculate() {
+            let salary = parseFloat(prompt("Введите сумму вашей зарплаты:"));
+            if (isNaN(salary)) {
+                alert("Пожалуйста, введите корректное число.");
+                return;
+            }
 
+            let bonus = salary * 0.15;
+            let totalWithBonus = salary + bonus;
+            let taxes = totalWithBonus * 0.10;
+            let afterTaxes = totalWithBonus - taxes;
+            let afterShopping = afterTaxes - 90;
+            let finalAmount = afterShopping / 2;
 
-
-
-
+            alert(`Зарплата: ${salary.toFixed(2)}\n` +
+                  `Премия 15%: ${bonus.toFixed(2)}\n` +
+                  `Сумма с премией: ${totalWithBonus.toFixed(2)}\n` +
+                  `Налоги 10%: ${taxes.toFixed(2)}\n` +
+                  `После налогов: ${afterTaxes.toFixed(2)}\n` +
+                  `После трат в магазине: ${afterShopping.toFixed(2)}\n` +
+                  `Оставшаяся сумма для каждого: ${finalAmount.toFixed(2)}`);
+        }
     </script>
-
-
-
-
 </head>
 <body>
-
-
+    <button onclick="calculate()">Рассчитать</button>
 </body>
-
 </html>
